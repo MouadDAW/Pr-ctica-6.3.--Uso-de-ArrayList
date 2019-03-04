@@ -122,4 +122,23 @@ public class EmpresaAlquiler {
             System.out.println(vehiculos.get(i));
         }
     }
+
+    private Cliente getCliente(String nif) {
+        for (int i = 0; i < this.getTotalClientes(); i++) {
+            if (this.clientes.get(i).getNif().equals(nif)) {
+                return this.clientes.get(i);
+            }
+        }
+        return null;
+    }
+
+    private Vehiculo getVehiculo(String matricula) {
+        for (int i = 0; i < this.getTotalVehiculos(); i++) {
+            if (this.vehiculos.get(i).getMatricula().equals(matricula)) {
+                return this.vehiculos.get(i);
+            }
+        }
+
+        return null;
+    }
 }
