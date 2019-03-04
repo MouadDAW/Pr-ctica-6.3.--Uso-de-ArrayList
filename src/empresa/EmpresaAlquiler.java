@@ -96,9 +96,18 @@ public class EmpresaAlquiler {
     public void setAlquileres(ArrayList<VehiculoAlquilado> alquileres) {
         this.alquileres = alquileres;
     }
+//registrarCliente
 
-        public void registrarCliente(Cliente nuevo) {
+    public void registrarCliente(Cliente nuevo) {
         this.clientes.add(nuevo);
 
     }
+    //registrarVehiculo   
+
+    public void registrarVehiculo(Vehiculo nuevo) {
+        this.vehiculos.add(nuevo);
+
+    }
+
 }
+
