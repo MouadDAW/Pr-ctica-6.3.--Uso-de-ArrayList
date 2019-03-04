@@ -7,7 +7,7 @@ package empresa;
 
 /**
  *
- * @author Sara
+ * @author Mouad
  */
 public class Vehiculo {
 
