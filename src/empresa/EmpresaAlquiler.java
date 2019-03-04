@@ -115,4 +115,11 @@ public class EmpresaAlquiler {
             System.out.println(clientes.get(i));
         }
     }
+
+    //imprimirVehiculos()
+    public void imprimirVehiculos() {
+        for (int i = 0; i < this.totalVehiculos; i++) {
+            System.out.println(vehiculos.get(i));
+        }
+    }
 }
