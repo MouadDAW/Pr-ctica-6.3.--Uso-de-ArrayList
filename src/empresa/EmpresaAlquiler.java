@@ -5,6 +5,8 @@
  */
 package empresa;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 
 /**
@@ -140,5 +142,28 @@ public class EmpresaAlquiler {
         }
 
         return null;
+    }
+    public void alquilarVehiculo(String matricula, String nif, int dias) {
+
+        Cliente cliente = getCliente(nif);
+        Vehiculo vehiculo = getVehiculo(matricula);
+        if (vehiculo.isDisponible()) {
+            vehiculo.setDisponible(false);
+            this.alquileres.add(
+                    new VehiculoAlquilado(cliente, vehiculo, diaHoy(), mesHoy(), añoHoy(), dias));
+
+        }
+    }
+
+    public static int diaHoy() {
+        return LocalDate.now().getDayOfMonth();
+    }
+
+    public static Month mesHoy() {
+        return LocalDate.now().getMonth();
+    }
+
+    public static int añoHoy() {
+        return LocalDate.now().getYear();
     }
 }
