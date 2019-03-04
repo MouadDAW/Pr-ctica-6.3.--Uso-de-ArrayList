@@ -109,5 +109,10 @@ public class EmpresaAlquiler {
 
     }
 
+    //imprimirClientes()
+    public void imprimirClientes() {
+        for (int i = 0; i < this.totalClientes; i++) {
+            System.out.println(clientes.get(i));
+        }
+    }
 }
-
